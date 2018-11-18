@@ -11,8 +11,8 @@ export function getMovieData(page){
     }
 
 }
-export function getMovieTermData(term,page){
-    let data=axios.get("" + term + "&page=" +page)
+export function getMovieTermData(term){
+    let data=axios.get("https://akrp-server.herokuapp.com/movies/" + term)
     return{
         type: MOVIE_TERM_DATA,
         payload:data
